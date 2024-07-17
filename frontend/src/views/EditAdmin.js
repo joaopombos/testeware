@@ -21,7 +21,7 @@ const SoftwareUpdate = () => {
         const fetchSoftware = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:3000/edit/admin/${idproduto}`, {
+                const response = await axios.get(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/edit/admin/${idproduto}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

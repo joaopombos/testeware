@@ -25,7 +25,7 @@ const EditClientAdmin = () => {
         const fetchClient = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:3000/admin/clientes/${nif}`, {
+                const response = await axios.get(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/clientes/${nif}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -42,7 +42,7 @@ const EditClientAdmin = () => {
         const fetchCompanyNifs = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:3000/admin/empresas', {
+                const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/empresas', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

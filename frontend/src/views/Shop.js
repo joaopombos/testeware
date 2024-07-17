@@ -14,7 +14,7 @@ const Shop = () => {
         const fetchItems = async () => {
             try {
 
-                const endpoint = `http://localhost:3000/shop/softwares?type=${type}`;
+                const endpoint = `postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/shop/softwares?type=${type}`;
                 const response = await axios.get(endpoint, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`

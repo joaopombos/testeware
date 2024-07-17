@@ -72,7 +72,7 @@ const AddSoftware = () => {
       console.log('Configuração da requisição:', config);
 
       console.log('Enviando requisição para adicionar software...');
-      const response = await axios.post('http://localhost:3000/add/admin', softwareData, config);
+      const response = await axios.post('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/add/admin', softwareData, config);
 
       console.log('Resposta do servidor:', response.data);
       // Lógica de tratamento da resposta

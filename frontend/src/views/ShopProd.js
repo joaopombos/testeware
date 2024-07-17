@@ -22,7 +22,7 @@ const ShopProd = () => {
     useEffect(() => {
         const fetchItem = async () => {
             try {
-                const endpoint = `http://localhost:3000/shop/${idproduto}`;
+                const endpoint = `postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/shop/${idproduto}`;
                 const response = await axios.get(endpoint, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -42,7 +42,7 @@ const ShopProd = () => {
     const handleModalhistOpen = async () => {
         setShowhistModal(true);
         try {
-            const response = await axios.get(`http://localhost:3000/versions/${idproduto}`, {
+            const response = await axios.get(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/versions/${idproduto}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 },
@@ -62,7 +62,7 @@ const ShopProd = () => {
 
     const handleCompra = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/shop/compra/', {
+            const response = await axios.post('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/shop/compra/', {
                 quantidade: quantidadeLicencas,
                 idproduto: item.idproduto,
                 nome: item.nome,

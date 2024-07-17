@@ -14,7 +14,7 @@ export default function Sign_gestor() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/signin/gestor', {
+            await axios.post('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/signin/gestor', {
                 nome,
                 emp_nif,
                 email,

@@ -109,8 +109,8 @@ shopController.purchaseSuccess = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: 'https://localhost:3001/shop/sucess',
-            cancel_url: 'https://localhost:3001/shop/cancel',
+            success_url: 'https://testeware.onrender.com/shop/sucess',
+            cancel_url: 'https://testeware.onrender.com/shop/cancel',
         });
 
 

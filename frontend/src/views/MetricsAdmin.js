@@ -14,7 +14,7 @@ const Metrics = () => {
     const fetchMetrics = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/metrics/admin', {
+        const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/metrics/admin', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
